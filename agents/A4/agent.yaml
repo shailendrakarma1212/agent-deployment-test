@@ -1,0 +1,7 @@
+name: A4
+runtime: python
+entrypoint: main.py
+requirements_file: requirements.txt
+health_check:
+  command: []
+  timeout_seconds: 30
