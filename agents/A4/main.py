@@ -6,7 +6,7 @@ app = FastAPI()
 
 @app.get("/")
 def root():
-    return {"message": "A4 updated automatically"}
+    return {"message": "A4 updated automatically testing successfully"}
 
 
 @app.get("/health")
