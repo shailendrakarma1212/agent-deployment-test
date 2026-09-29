@@ -1,0 +1,27 @@
+name: A5
+runtime: python
+requirements_file: requirements.txt
+
+start_command:
+  - "{python}"
+  - "-m"
+  - "uvicorn"
+  - "main:app"
+  - "--host"
+  - "0.0.0.0"
+  - "--port"
+  - "8001"
+
+preflight:
+  command:
+    - "{python}"
+    - "-c"
+    - "from main import app"
+  timeout_seconds: 30
+
+health_check:
+  command:
+    - "{python}"
+    - "-c"
+    - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8001/health', timeout=3).read()"
+  timeout_seconds: 30
