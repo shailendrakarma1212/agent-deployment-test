@@ -5,7 +5,7 @@ app = FastAPI()
 
 @app.get("/")
 def root():
-    return {"message": "A5 running successfully service automatically deploye changes with testing "} 
+    return {"message": "A5 running successfully service automatically deploye changes with testing test in c dir "} 
 
 
 @app.get("/health")
